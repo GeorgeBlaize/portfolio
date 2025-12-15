@@ -1,11 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jonathan | Portfolio</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
 </head>
-<body>
-    
+
+<body class="bg-[#0b1120] text-white scroll-smooth transition-colors duration-300">
+
+<!-- ================= NAVBAR ================= -->
+<nav class="fixed top-0 w-full bg-[#0b1120]/80 backdrop-blur z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+    <h1 class="text-2xl font-bold">
+      Portfolio<span class="text-cyan-400">.</span>
+    </h1>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex gap-8 text-gray-300">
+      <li><a href="#home" class="hover:text-cyan-400">Home</a></li>
+      <li><a href="#about" class="hover:text-cyan-400">About</a></li>
+      <li><a href="#skills" class="hover:text-cyan-400">Skills</a></li>
+      <li><a href="#projects" class="hover:text-cyan-400">Projects</a></li>
+      <li><a href="#contact" class="hover:text-cyan-400">Contact</a></li>
+    </ul>
+
+    <!-- Right Controls -->
+    <div class="flex items-center gap-4">
+      <!-- Theme Toggle -->
+      <button id="themeToggle" class="text-xl text-cyan-400">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+
+      <!-- Mobile Menu Button -->
+      <button id="menuBtn" class="md:hidden text-2xl">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden bg-[#020617] px-6 pb-6 md:hidden">
+    <ul class="flex flex-col gap-4 text-gray-300">
+      <li><a onclick="closeMenu()" href="#home">Home</a></li>
+      <li><a onclick="closeMenu()" href="#about">About</a></li>
+      <li><a onclick="closeMenu()" href="#skills">Skills</a></li>
+      <li><a onclick="closeMenu()" href="#projects">Projects</a></li>
+      <li><a onclick="closeMenu()" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section id="home" class="min-h-screen flex items-center max-w-7xl mx-auto px-6 pt-28 grid md:grid-cols-2 gap-12">
+
+  <div>
+    <p class="text-gray-400">Hello, It's Me</p>
+
+    <h1 class="text-5xl font-extrabold mt-2">
+      Jonathan George Blaize Purification
+    </h1>
+
+    <h2 class="text-2xl mt-3">
+      And I'm a <span id="typing" class="text-cyan-400"></span>
+    </h2>
+
+    <p class="text-gray-400 mt-6 max-w-md">
+      Frontend developer focused on building clean, responsive, and user-friendly web applications.
+    </p>
+
+    <!-- Social Icons -->
+    <div class="flex gap-4 mt-6">
+      <a class="icon" href="https://www.facebook.com/george.blaize25"><i class="fab fa-facebook-f"></i></a>
+      <a class="icon" href="https://x.com/blaize_geo75489"><i class="fab fa-x-twitter"></i></a>
+      <a class="icon" href="https://github.com/GeorgeBlaize"><i class="fab fa-github"></i></a>
+      <a class="icon" href="https://www.linkedin.com/in/jonathan-george-blaize-purification-5780341b2/"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+
+    <a href="https://drive.google.com/file/d/1gH6lp56KrowUDQjErK2xYGRgSN2avyLW/view"
+       class="inline-block mt-8 px-8 py-3 bg-cyan-400 text-black font-semibold rounded-full hover:scale-105 transition">
+      Download CV
+    </a>
+  </div>
+
+  <!-- Image -->
+  <div class="flex justify-center">
+    <div class="relative">
+      <div class="absolute inset-0 bg-cyan-400 blur-3xl opacity-40 rounded-full"></div>
+      <img src="/jgbp-Photoroom.png" class="relative w-80 rounded-xl" alt="Profile" />
+    </div>
+  </div>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="max-w-7xl mx-auto px-6 py-20">
+  <h2 class="section-title">About Me</h2>
+  <p class="text-gray-400 max-w-3xl mt-6">
+    I am a passionate frontend developer with experience in HTML, CSS, JavaScript,
+    Tailwind CSS, and React. I love turning designs into real-world applications.
+  </p>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills" class="bg-[#020617] light-section py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="section-title">My Skills</h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Tailwind CSS</div>
+      <div class="skill">React</div>
+      <div class="skill">Firebase</div>
+      <div class="skill">MongoDB</div>
+      <div class="skill">Git & GitHub</div>
+      <div class="skill">C</div>
+      <div class="skill">C++</div>
+      <div class="skill">Java</div>
+      <div class="skill">Python</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="max-w-7xl mx-auto px-6 py-20">
+  <h2 class="section-title">Projects</h2>
+
+  <div class="grid md:grid-cols-3 gap-8 mt-10">
+    <a href="https://georgeblaize.github.io/pet-shop/" class="card">Pet Shop Website</a>
+    <a href="https://georgeblaize.github.io/Kids-School/" class="card">Kids School Website</a>
+    <a href="https://georgeblaize.github.io/natures-platter/" class="card">Nature’s Platter</a>
+    <a href="https://georgeblaize.github.io/english-janala/" class="card">English Janala</a>
+    <a href="https://georgeblaize.github.io/webflow-agency/" class="card">Webflow Agency</a>
+    <a href="https://solid-prison.surge.sh/" class="card">Auction Gallery</a>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="bg-[#020617] light-section py-20">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="section-title">Contact Me</h2>
+    <p class="text-gray-400 mt-4">Email: jpurificatino25@email.com</p>
+    <p class="text-gray-400">Phone: +880-1758081762</p>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="text-center py-6 text-gray-500">
+  © 2025 Jonathan George Blaize Purification. All rights reserved.
+</footer>
+
+<!-- ================= STYLES ================= -->
+<style>
+  .icon{
+    width:40px;height:40px;
+    display:flex;align-items:center;justify-content:center;
+    border:1px solid #22d3ee;border-radius:50%;
+    color:#22d3ee;transition:.3s
+  }
+  .icon:hover{background:#22d3ee;color:black}
+  .section-title{font-size:2.5rem;font-weight:700}
+  .skill,.card{
+    background:#020617;padding:20px;
+    border-radius:12px;text-align:center;
+    border:1px solid #1e293b;
+    transition:.3s
+  }
+  .card:hover{transform:translateY(-5px);border-color:#22d3ee}
+
+
+  /* Light Mode */
+.light {
+  background: #f8fafc;
+  color: #020617;
+}
+
+/* Navbar */
+.light nav {
+  background: rgba(248, 250, 252, 0.9);
+}
+
+/* Sections with dark background */
+.light .light-section {
+  background: #f1f5f9;
+}
+
+/* Cards & Skills */
+.light .skill,
+.light .card {
+  background: #e5e7eb;
+  color: #020617;
+  border-color: #cbd5f5;
+}
+
+/* Icons */
+.light .icon {
+  border-color: #0ea5e9;
+  color: #0ea5e9;
+}
+
+/* Text fix */
+.light .text-gray-400 {
+  color: #475569;
+}
+
+/* Footer */
+.light footer {
+  color: #475569;
+}
+
+</style>
+
+<!-- ================= SCRIPTS ================= -->
+<script>
+
+  const texts = ["Frontend Developer", "Software Developer", "UI/UX Designer","Problem Solver"];
+  const typingEl = document.getElementById("typing");
+
+  let textIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function typeEffect() {
+    const currentText = texts[textIndex];
+
+    if (!isDeleting) {
+      typingEl.textContent = currentText.substring(0, charIndex + 1);
+      charIndex++;
+
+      if (charIndex === currentText.length) {
+        setTimeout(() => isDeleting = true, 1200);
+      }
+    } else {
+      typingEl.textContent = currentText.substring(0, charIndex - 1);
+      charIndex--;
+
+      if (charIndex === 0) {
+        isDeleting = false;
+        textIndex = (textIndex + 1) % texts.length;
+      }
+    }
+
+    setTimeout(typeEffect, isDeleting ? 60 : 100);
+  }
+
+  typeEffect();
+
+  /* Mobile Menu */
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+
+  function closeMenu() {
+    mobileMenu.classList.add("hidden");
+  }
+
+  /* Theme Toggle */
+  const themeToggle = document.getElementById("themeToggle");
+  const body = document.body;
+
+  themeToggle.addEventListener("click", () => {
+    body.classList.toggle("light");
+    themeToggle.innerHTML = body.classList.contains("light")
+      ? '<i class="fa-solid fa-sun"></i>'
+      : '<i class="fa-solid fa-moon"></i>';
+  });
+</script>
+
 </body>
 </html>
